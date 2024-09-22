@@ -18,42 +18,65 @@
                 <div class="artboard artboard-demo phone-3">
                     <div class="stats shadow">
                         <div class="stat">
-                            <div class="stat-value">9400</div>
+                            <div id="account-balance" class="stat-value">9400</div>
                             <div class="stat-desc">Available Balance</div>
                         </div>
                     </div>
                     <div class="divider"></div>
                     <!-- user action buttons -->
                     <div>
-                        <button class="btn btn-lg">Add Money</button>
-                        <button class="btn btn-lg">Cash Out</button>
+                        <button id="addMoney-form-btn" class="btn btn-lg">Add Money</button>
+                        <button id="cashOut-form-btn" class="btn btn-lg">Cash Out</button>
                     </div>
                     <div class="divider"></div>
                     <!-- add money form  -->
-                    <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                    <div id="addMoney-form" class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
                         <form class="card-body">
                             <div class="form-control">
                                 <label class="label">
                                     <span class="label-text">Amount</span>
                                 </label>
-                                <input type="text" placeholder="amount" class="input input-bordered" required />
+                                <input id="addAmount-input" type="text" placeholder="amount" class="input input-bordered" required />
                             </div>
                             <div class="form-control">
                                 <label class="label">
                                     <span class="label-text">Pin</span>
                                 </label>
-                                <input type="password" placeholder="Pin" class="input input-bordered" autocomplete="off" required />
+                                <input id="pinNumber-input" type="password" placeholder="Pin Number" class="input input-bordered" autocomplete="off" required />
                             </div>
                             <div class="form-control mt-6">
-                                <button class="btn btn-primary">Add Money</button>
+                                <button id="addMoney-btn" class="btn btn-primary">Add Money</button>
                             </div>
                         </form>
                     </div>
+                    <!-- add money form end -->
+                    <!-- cash out form start  -->
+                    <div id="cashOut-form" class="hidden card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                        <form class="card-body">
+                            <div class="form-control">
+                                <label class="label">
+                                    <span class="label-text">Amount</span>
+                                </label>
+                                <input id="cashOutAmount-input" type="text" placeholder="cash out amount" class="input input-bordered" required />
+                            </div>
+                            <div class="form-control">
+                                <label class="label">
+                                    <span class="label-text">Pin Number</span>
+                                </label>
+                                <input id="cashOutPinNumber-input" type="password" placeholder="Pin Number" class="input input-bordered" autocomplete="off" required />
+                            </div>
+                            <div class="form-control mt-6">
+                                <button id="cashOut-btn" class="btn btn-primary">Cash Out</button>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- cash out form end -->
                 </div>
             </div>
         </div>
     </main>
     <script src="js/home.js"></script>
+    <script src="js/features.js"></script>
 </body>
 
 </html>
